@@ -7,12 +7,12 @@ const FeedbackData = [
     {
         id: 2,
         rating: 4,
-        text: 'lorem nisi sjdisjd hdushc cushuchsui sdjbudf sjhdus',
+        text: `I couldn't figure out the UI`,
     },
     {
         id: 3,
         rating: 10,
-        text: 'lorem nisi sjdisjd hdushc cushuchsui sdjbudf sjhdus',
+        text: 'Best Webapp I have ever used, Help me align my tasks',
     }
 ]
 
