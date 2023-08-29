@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 
 function FeedbackStats({ feedback }) {
+  // Calculating the average
   let average = feedback.reduce((acc, cur) => {
     return acc + cur.rating
   }, 0)/ feedback.length
