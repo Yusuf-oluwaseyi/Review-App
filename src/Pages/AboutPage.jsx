@@ -1,7 +1,18 @@
+import Card from "../shared/Card"
 
 function AboutPage() {
   return (
-    <div>AboutPage</div>
+    <Card>
+        <div className="about">
+            <h1>About This Project</h1>
+            <p>This is a react app to leave reviews for our Obsession app that helps you schedule your goals</p>
+            <p>Version: 1.0.0 </p>
+
+            <p>
+                <a href="/">Go Back Home</a>
+            </p>
+        </div>
+    </Card>
   )
 }
 
