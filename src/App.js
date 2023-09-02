@@ -22,17 +22,22 @@ function App() {
   }
  
   return (
-    <>
+    <Router>
     <Header text='Obsession App'/>
     <div className="container">
-    <Route exact path='/'>
-      <FeedbackForm handleAdd={addFeedback}/>
-      <FeedbackStats feedback={feedback}/>
-      <FeedbackList feedback={feedback} handleDelete={deleteFeedback}/>
+    <Routes>
+    <Route exact path='/' element={
+      <>
+        <FeedbackForm handleAdd={addFeedback}/>
+        <FeedbackStats feedback={feedback}/>
+        <FeedbackList feedback={feedback} handleDelete={deleteFeedback}/>
+      </>
+    }>
     </Route>
+    <Route path='/about' element={<AboutPage/>} />
+    </Routes>
     </div>
-    <Route path='/about' Component={AboutPage} />
-    </>
+    </Router>
   );
 }
 
