@@ -9,6 +9,7 @@ import FeedbackForm from './components/FeedbackForm';
 import FeedbackData from './Data/FeedbackData';
 import AboutLinkIcon from './components/AboutLinkIcon';
 import AboutPage from './Pages/AboutPage';
+import { FeedbackProvider } from './Context/FeedbackContext';
 
 function App() {
   const [feedback, setFeedback] = useState      (FeedbackData)
@@ -23,6 +24,7 @@ function App() {
   }
  
   return (
+    <FeedbackProvider>
     <Router>
     <Header text='Obsession App'/>
     <div className="container">
@@ -31,7 +33,7 @@ function App() {
       <>
         <FeedbackForm handleAdd={addFeedback}/>
         <FeedbackStats feedback={feedback}/>
-        <FeedbackList feedback={feedback} handleDelete={deleteFeedback}/>
+        <FeedbackList handleDelete={deleteFeedback}/>
       </>
     }>
     </Route>
@@ -40,6 +42,7 @@ function App() {
     <AboutLinkIcon />
     </div>
     </Router>
+    </FeedbackProvider>
   );
 }
 
