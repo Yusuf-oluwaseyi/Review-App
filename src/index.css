@@ -91,7 +91,7 @@ header h2 {
 
 .rating li:hover,
 .num-display {
-  background: #ff6a95;
+  background: #cef100;
   color: #fff;
 }
 
@@ -100,7 +100,7 @@ header h2 {
 }
 
 [type='radio']:checked ~ label {
-  background: #ff6a95;
+  background: #89a333;
   color: #fff;
 }
 
