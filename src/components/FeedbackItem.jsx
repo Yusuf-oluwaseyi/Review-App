@@ -1,4 +1,4 @@
-import { FaTimes } from 'react-icons/fa'
+import { FaTimes, FaEdit } from 'react-icons/fa'
 import { useContext } from 'react'
 import Card from "../shared/Card"
 import FeedbackContext from '../Context/FeedbackContext'
@@ -9,7 +9,8 @@ function FeedbackItem({ item }) {
   return (
     <Card reverse={false}>
     <div className="num-display">{item.rating}</div>
-    <button onClick={() => deleteFeedback(item.id)} className='close'><FaTimes color='#c1fe00'/></button>
+    <button onClick={() => deleteFeedback(item.id)} className='close'><FaTimes color='#C9de00'/></button>
+    <button className="edit"><FaEdit color='#cc563'/></button>
     <div className="text-display">{item.text}</div>
     </Card>
   )
